@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
+require('es6-promise').polyfill();
 
 module.exports = function() {
   return gulp.src('source/stylesheets/*.scss')

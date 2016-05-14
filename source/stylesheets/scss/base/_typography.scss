@@ -1,0 +1,60 @@
+$font-size-headings: 28px;
+$font-size-body: 16px;
+$font-size-small: 12px;
+
+@mixin font-size($size: $font-size-body) {
+  font-size: $size;
+}
+
+@mixin font-base-attributes($size, $weight, $style) {
+  @include font-size($size);
+  font-weight: $weight;
+  line-height: 1.375;
+
+  @if $style != normal { font-style: $style; }
+}
+
+@mixin base-font($size: $font-size-body, $weight: inherit, $style: normal) {
+  @include font-base-attributes($size, $weight, $style);
+  font-family: 'Helvetica', sans-serif;
+}
+
+%font-default {
+  font-family: 'Helvetica', sans-serif;
+  font-weight: normal;
+  font-size: $font-size-body;
+}
+
+%font-heading {
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 600;
+  font-size: $font-size-headings;
+}
+
+%font-small {
+  font-size: $font-size-small;
+}
+
+body {
+	@include base-font();
+}
+
+h1 {
+	@extend %font-heading;
+}
+
+* + p,
+p + * {
+  margin-top: 15px;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+  margin: 0;
+
+  * + & {
+    margin-top: 30px;
+  }
+}

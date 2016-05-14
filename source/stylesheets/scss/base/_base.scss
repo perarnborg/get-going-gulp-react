@@ -1,0 +1,46 @@
+html {
+  background-color: $color-header-bg;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-size: $font-size-body;
+}
+
+body {
+  color: $color-typography-base;
+}
+
+*, *:before, *:after {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: $color-accent;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-accent;
+  }
+}
+
+p {
+  margin-bottom: 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+input, textarea, button {
+  -webkit-font-smoothing: inherit;
+
+  &:focus {
+    outline: none;
+  }
+}

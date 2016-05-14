@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <title>{{ title if title else 'Default title' }}</title>
+    <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body>
+    {% include "source/partials/header.html" %}
+    {% block body %}
+    {% endblock %}
+    <script src="javascripts/dependencies.js"></script>
+    <script src="javascripts/app.js" type="text/babel"></script>
+    {% block scripts %}{% endblock %}
+  </body>
+</html>

@@ -1,7 +1,11 @@
 var gulp = require('./gulp')([
-  'sass',
-  'javascript',
   'bower',
+  'bower-files',
+  'sass',
+  {
+    name: 'javascript',
+    dependencies: ['bower-files']
+  },
   'clean',
   'watch',
   'html',
