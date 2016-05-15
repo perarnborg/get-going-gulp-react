@@ -1,7 +1,4 @@
 var Typeahead = React.createClass({
-  getInitialState: function() {
-    return {value: this.props.value};
-  },
   componentDidMount: function() {
     var self = this;
 
@@ -39,16 +36,11 @@ var Typeahead = React.createClass({
       source: query
     });
 
-    var select = function(item) {
-      self.setState({value: item[self.props.label]});
-      self.props.update(item);
-    }
-
     el.on('typeahead:select', function(e, item) {
-      select(item);
+      self.props.update(item);
     });
     el.on('typeahead:autocomplete', function(e, item) {
-      select(item);
+      self.props.update(item);
     });
   },
   render: function() {
