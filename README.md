@@ -1,5 +1,5 @@
-GET GOING REACT
-===============
+GET GOING REACT (WITH GULP)
+===========================
 
 Get Going is a series of boilerplate/starting point setups for web devevelopment. This is the React version, wich is a setup for building a React project.
 
